@@ -1,0 +1,127 @@
+* {
+  padding: 0;  
+  box-sizing: border-box;  
+} 
+
+/* Stylowanie elementu body */
+body { 
+  display: flex; /* Ustawia wyświetlanie na flex, co umożliwia elastyczne rozmieszczanie dzieci */
+  align-items: center; /* Wyśrodkowuje dzieci w pionie */
+  justify-content: center; /* Wyśrodkowuje dzieci w poziomie */
+  min-height: 100vh; /* Minimalna wysokość na 100% wysokości viewportu */
+  background-color: white;  
+  background-image: linear-gradient(to bottom, #4CAF50, #1872d2);  
+  font-size: 20px;  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+
+/* Stylowanie kontenera wirtualnej klawiatury */
+.virtualKeyboard {
+  display: grid;  
+  margin-inline: 10px;  
+  gap: 10px;  
+  padding: 15px;  
+  width: 730px;  
+  border-radius: 6px; 
+  background-color: #047604;  
+  color: white; 
+}
+ 
+/* Stylowanie pola tekstowego */
+.virtualKeyboard input {
+  display: block;  
+  padding: 10px;  
+  width: 100%;  
+  margin-bottom: 10px;  
+  outline: none; /* Usuwa obramowanie przy fokusie */
+  border: none;  
+  border-bottom: 1px solid white;  
+  background-color: transparent;  
+  font-weight: bold;  
+  font-size: 20px;  
+  color: white; 
+}
+
+/* Stylowanie placeholdera inputa */
+.virtualKeyboard input::placeholder {
+  color: lightgray;  
+  font-size: 20px;  
+}
+
+/* Stylowanie divów w kontenerze klawiatury */
+.virtualKeyboard div {
+  display: flex;  
+  gap: 10px; 
+  width: 100%; 
+}
+
+/* Stylowanie poszczególnych klawiszy */
+.virtualKeyboard span {
+  display: block;  
+  flex: 1; /* Elementy flex rozciągają się, aby wypełnić dostępną przestrzeń */
+  padding: 8px;  
+  border-radius: 5px;  
+  background-color: #499b05; 
+  transition: .3s;  
+  text-align: center;  
+  cursor: pointer;  
+}
+
+/* Stylowanie klawiszy przy najechaniu */
+.virtualKeyboard span:hover {
+  filter: brightness(70%); /* Zmniejsza jasność klawisza przy najechaniu */
+}
+
+/* Stylowanie klawiszy przy aktywacji (kliknięciu) */
+.virtualKeyboard span:active {
+  scale: 0.85; /* Zmniejsza rozmiar klawisza, dając efekt wciśnięcia */
+}
+
+/* Stylowanie środkowego wiersza klawiatury */
+.virtualKeyboard div.middleRow {
+  padding-inline: 15px;  
+}
+ 
+.virtualKeyboard div.bottomRow span.upArrow {
+  font-weight: bold;  
+  font-size: 18px;  
+  padding-inline: 12px;  
+}
+ 
+.virtualKeyboard div.bottomRow span.del { 
+  display: flex;  
+  align-items: center; 
+  justify-content: center;  
+  background-color: #f30659;  
+}
+ 
+.virtualKeyboard div.controlRow span.spaceBar {
+  padding-inline: 100px; /* Dodaje większy wewnętrzny odstęp z obu stron klawisza spacji */
+}
+ 
+.virtualKeyboard div.controlRow span.altKey {
+  padding-inline: 30px;  
+}
+ 
+.virtualKeyboard div.numberKeys {
+  display: none; /* Ukrywa rzęd z cyframi */
+}
+
+/* Stylowanie podświetlonych klawiszy */
+.key.highlight, 
+.controlButton.highlight, 
+.numberKeys .highlight  {
+  background-color: #ffeb3b;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
